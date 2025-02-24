@@ -2,7 +2,7 @@ name: Build and Deploy
 
 on:
   push:
-    branches: [ devto ]
+    branches: [ main ]
   pull_request:
 
 jobs:
@@ -53,7 +53,7 @@ jobs:
 
   deploy:
     name: Deploy
-    if: github.ref == 'refs/heads/devto' && github.event_name == 'push'
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
