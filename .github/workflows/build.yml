@@ -22,7 +22,6 @@ jobs:
       - name: Install Dependencies
         uses: bahmutov/npm-install@v1
 
-        #Make sure that cache is retrieved even if steps fail
       - name: cache-node-modules
         uses: pat-s/always-upload-cache@v3
         env:
