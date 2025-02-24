@@ -50,7 +50,7 @@ jobs:
         id: get-id
         run: |
           ID=$(go run get-blog-id.go)
-          echo "POST_ID=$ID" >> $GITHUB_ENV
+          echo "POST_ID=$ID" >> $GITHUB_OUTPUT
 
       # 翻訳を実行
       - name: Translate content
