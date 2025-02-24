@@ -3,13 +3,24 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier": "prettier",
+    "embedme": "embedme devto/*.md",
+    "prettier:base": "npm run prettier devto/\"**/*.{js,json,scss,md,ts,html,component.html}\"",
+    "prettier:write": "npm run prettier:base --write ",
+    "prettier:check": "npm run prettier:base --check",
+    "embedme:check": "npm run embedme --verify",
+    "embedme:write": "npm run embedme",
+    "dev-to-git": "dev-to-git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "zenn-cli": "^0.1.158"
+    "zenn-cli": "^0.1.158",
+    "dev-to-git": "1.4.9",
+    "embedme": "1.22.0",
+    "prettier": "^2.6.2"
   }
 }

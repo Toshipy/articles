@@ -46,10 +46,10 @@ jobs:
         run: cat .textlint.log | reviewdog -f=checkstyle -name="textlint" -reporter="github-pr-review"
 
       - name: Run Prettier
-        run: yarn run prettier:check
+        run: npm run prettier:check
 
       - name: Run Embedme
-        run: yarn run embedme:check
+        run: npm run embedme:check
 
   deploy:
     name: Deploy
@@ -63,4 +63,4 @@ jobs:
         uses: bahmutov/npm-install@v1
 
       - name: Deploy to dev.to
-        run: DEV_TO_GIT_TOKEN=${{ secrets.DEV_TO_GIT_TOKEN }} yarn run dev-to-git
+        run: DEV_TO_GIT_TOKEN=${{ secrets.DEV_TO_GIT_TOKEN }} npm run dev-to-git
