@@ -22,5 +22,9 @@
     "dev-to-git": "1.4.9",
     "embedme": "1.22.0",
     "prettier": "^2.6.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/toshipy/articles"
   }
 }
